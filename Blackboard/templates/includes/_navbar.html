@@ -8,7 +8,6 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
 
           </button>
           <a class="navbar-brand" href="/">Blackboard 2.0</a>
@@ -17,15 +16,18 @@
           <ul class="nav navbar-nav">
             <li><a href="/">Home</a></li>
             <li><a href="/students">Students</a></li>
-            <li><a href="/grade">Grade</a></li>
             <li><a href="/class">Class</a></li>
             <li><a href="/faculty">Faculty</a></li>
             <li><a href="/about">About</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="/login" class="btn btn-success btn-lg">Login</a></li>
-            <li><a href="/register" class="btn btn-primary btn-lg">Register</a></li>
-
+            {% if session.logged_in %}
+              <li><a href="/grade">Grade</a></li>
+              <li><a href="/logout">Logout</a></li>
+            {% else %}
+              <li><a href="/register">Register</a></li>
+              <li><a href="/login">Login</a></li>
+            {% endif %}
           </ul>
         </div>
       </div>
