@@ -98,7 +98,7 @@ def login():
                 session['logged_in'] = True
                 session['username'] = username
 
-                
+
                 return redirect(url_for('grade'))
             else:
                 error = 'Invalid login'
@@ -141,5 +141,5 @@ def grade():
 
 
 if __name__ == '__main__':
-    app.secret_key='SE2020'
+    app.secret_key='CoVid19'
     app.run(debug = True)
