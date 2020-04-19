@@ -7,9 +7,12 @@
     <div class="form-group">
       {{ render_field(form.title, class_="form-control") }}
     </div>
+
     <div class="form-group">
       {{ render_field(form.body, class_="form-control", id="editor") }}
     </div>
+
     <p><input class="btn btn-primary" type="submit" value="Submit">
   </form>
+
 {% endblock %}
